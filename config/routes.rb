@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get "/auth/auth0/callback" => "auth0#callback"
+  get "/auth/failure" => "auth0#failure"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#hello'
+  root 'auth0#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
