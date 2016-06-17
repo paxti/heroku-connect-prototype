@@ -22,6 +22,8 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'sqlite3'
+  gem 'certified'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'dotenv-rails', :groups => [:development, :test]

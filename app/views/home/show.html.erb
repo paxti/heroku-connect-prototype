@@ -1,15 +1,15 @@
 <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
-<script type="text/javascript">
+<script>
   
   var lock = new Auth0Lock('OaaRzsLcJSodX1LoyCLLkaMaKSwGpxkC', 'app52272635.auth0.com');
   
   
   function signin() {
     lock.show({
-        callbackURL: 'https://test-sf-connect.herokuapp.com/auth/auth0/callback'
+        callbackURL: "<%= ENV['AUTH0_CALLBACK_URL'] %>"
       , responseType: 'code'
       , authParams: {
-        scope: 'openid email'  // Learn about scopes: https://auth0.com/docs/scopes 
+        scope: 'openid email'
       }
     });
   }
