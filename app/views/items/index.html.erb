@@ -1,0 +1,17 @@
+<h1>Salesforce Items</h1>
+<table>
+    <tr>
+        <th>Name</th><th>Description</th><th>Salesforce Id</th>
+    </tr>
+    <% @items.each do |item| %>
+    <tr>
+        <td><%= item.name %>
+        <td><%= item.i_m__description__c %>
+        <td><%= item.sfid %></td>
+        <td><%= link_to 'Show', item_path(item) %></td>
+    </tr>
+    <% end %>
+</table>
+
+
+<p><%= link_to "Add new item", {:action => 'new' }%></p>

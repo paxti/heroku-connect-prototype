@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   get 'welcome/index'
   get "/welcome" => "welcome#index"
+  resources :items
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
