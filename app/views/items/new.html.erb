@@ -1,0 +1,6 @@
+<%= form_for @item, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :i_m__description__c %>
+  <%= f.select 'i_m__to_category__c', options_for_select(@categories.map{|category| ["#{category.name}", category.sfid] }) %>
+  <%= f.submit "Create" %>
+<% end %>
