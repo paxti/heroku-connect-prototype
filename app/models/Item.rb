@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
     self.table_name = 'salesforce.i_m__item__c'
-    has_one :category, :primary_key => "sfid", :foreign_key => "i_m__to_category__c"
+    belongs_to :category, :primary_key => "i_m__category__c__i_m__externalid__c", :foreign_key => "i_m__externalid__c"
 end
